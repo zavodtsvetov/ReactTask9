@@ -1,27 +1,19 @@
 import s from "./App.module.css";
 import { Info } from "./components/Info/Info";
 import { Field } from "./components/Field/Field";
-import { store } from "./components/store";
 import { selectField } from "./components/selectors/select-field";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 function App() {
 	const field = useSelector(selectField);
+	const dispatch = useDispatch();
 	const handleReplay = () => {
-		store.dispatch({ type: "RESTART" });
+		dispatch({ type: "RESTART" });
 	};
 
 	const startButton = (
-		<button
-			onClick={handleReplay}
-			style={{
-				marginTop: "20px",
-				fontSize: "50px",
-				border: null,
-				background: "linear-gradient(skyBlue,blue)",
-				color: "white",
-			}}
-		>
+		<button onClick={handleReplay} className={s.restartButton}>
 			Очистить поле
 		</button>
 	);

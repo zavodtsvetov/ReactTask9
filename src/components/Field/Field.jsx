@@ -1,11 +1,10 @@
 import PropTypes from "prop-types";
-import { handleCLick } from "../handleClick";
 import { FieldLayout } from "./FIeldLayout";
 
 export const Field = () => {
 	return (
 		<>
-			<FieldLayout handleCLick={handleCLick} />
+			<FieldLayout />
 		</>
 	);
 };

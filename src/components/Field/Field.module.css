@@ -15,9 +15,9 @@
 	width: 200px;
 	height: 200px;
 	font-size: 100px;
-	background-color: #d5f3ff;
+	background-color: #ffffff;
 }
 .button:active {
 	cursor: wait;
-	background-color: #72d2f8;
+	background-color: #11f809;
 }
